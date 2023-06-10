@@ -33,7 +33,6 @@ exit
 ```
 ## Instalando e Configurando acesso remoto ao postgreSQL
 
-Esse é um 
 ### Intalando postgreSQL 
 ```
 sudo apt install postgresql postgresql-contrib
