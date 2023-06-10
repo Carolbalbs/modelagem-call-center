@@ -33,7 +33,7 @@ exit
 ```
 ## Instalando e Configurando acesso remoto ao postgreSQL
 
-Esse é um 
+
 ### Intalando postgreSQL 
 ```
 sudo apt install postgresql postgresql-contrib
@@ -110,73 +110,10 @@ sudo systemctl enable firewalld
 ```
 Selecione o numero da porta que deseja habilitar eu escolhi habilitar a '5432' por que é o padrão de conexão com o postgre
 ```
-sudo firewall-cmd --permanent --zone=public --add-port=/tcp
+sudo firewall-cmd --permanent --zone=public --add-port=5432/tcp
 sudo firewall-cmd --reload
 ```
 
-
-## Referência
-
- - [Awesome Readme Templates](https://awesomeopensource.com/project/elangosundar/awesome-README-templates)
- - [Awesome README](https://github.com/matiassingers/awesome-readme)
- - [How to write a Good readme](https://bulldogjob.com/news/449-how-to-write-a-good-readme-for-your-github-project)
-
-
-## Apêndice
-
-Coloque qualquer informação adicional aqui
-
-
-## Documentação da API
-
-#### Retorna todos os itens
-
-```http
-  GET /api/items
-```
-
-| Parâmetro   | Tipo       | Descrição                           |
-| :---------- | :--------- | :---------------------------------- |
-| `api_key` | `string` | **Obrigatório**. A chave da sua API |
-
-#### Retorna um item
-
-```http
-  GET /api/items/${id}
-```
-
-| Parâmetro   | Tipo       | Descrição                                   |
-| :---------- | :--------- | :------------------------------------------ |
-| `id`      | `string` | **Obrigatório**. O ID do item que você quer |
-
-#### add(num1, num2)
-
-Recebe dois números e retorna a sua soma.
-
-
-## Autores
-
-- [@octokatherine](https://www.github.com/octokatherine)
-
-
-## Etiquetas
-
-Adicione etiquetas de algum lugar, como: [shields.io](https://shields.io/)
-
-[![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
-[![GPLv3 License](https://img.shields.io/badge/License-GPL%20v3-yellow.svg)](https://opensource.org/licenses/)
-[![AGPL License](https://img.shields.io/badge/license-AGPL-blue.svg)](http://www.gnu.org/licenses/agpl-3.0)
-
-
-## Usado por
-
-Esse projeto é usado pelas seguintes empresas:
-
-- Empresa 1
-- Empresa 2
-
-
-## Uso/Exemplos
 
 
 
