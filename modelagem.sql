@@ -2,7 +2,7 @@
 --FUNCIONARIO 
 matricula NVARCHAR(7) NOT NULL
 cod_departamento NVARCHAR(5) NOT NULL
-cod_cargo NVARCHAR(4) NOT NULL
+cod_cargo NVARCHAR(5) NOT NULL
 nome NVARCHAR(30)  NOT NULL
 sexo NCHAR(1) NOT NULL
 telefone NVARCHAR(11) NOT NULL
@@ -14,28 +14,28 @@ cod_departamento  NVARCHAR(5) NOT NULL
 nome_departamento NVARCHAR(12) NOT NULL
 
 -- CARGO 
-cod_cargo NVARCHAR(4) NOT NULL
+cod_cargo NVARCHAR(5) NOT NULL
 nome_cargo NVARCHAR(12) NOT NULL
 
 -- GERENTE
 salario FLOAT(8) NOT NULL
 cod_cargo NCHAR(5) NOT NULL
-cod_departamento  NVARCHAR(4) NOT NULL
+cod_departamento  NVARCHAR(5) NOT NULL
 matricula NVARCHAR(7) NOT NULL
 vale_alimentacao FLOAT(8) NOT NULL
 
 -- COORDENADOR DE ATENDIMENTO
 gratificacao FLOAT(8) NOT NULL
-cod_cargo NCHAR(11) NOT NULL
-cod_departamento  NVARCHAR(4) NOT NULL
+cod_cargo NCHAR(5) NOT NULL
+cod_departamento NVARCHAR(5) NOT NULL
 matricula NVARCHAR(7) NOT NULL
 salario FLOAT(8) NOT NULL
 
 
 -- ANALISTA DE CALL CENTER
 especialidade NVARCHAR(12) NOT NULL
-cod_cargo NCHAR(11) NOT NULL
-cod_departamento  NVARCHAR(4) NOT NULL
+cod_cargo NCHAR(5) NOT NULL
+cod_departamento NVARCHAR(5) NOT NULL
 matricula NVARCHAR(7) NOT NULL
 salario FLOAT(8) NOT NULL
 
@@ -43,30 +43,30 @@ salario FLOAT(8) NOT NULL
 -- ATENDENTE DE CALL CENTER 
 
 hora_extra FLOAT(8) NOT NULL
-cod_cargo NCHAR(11) NOT NULL
-cod_departamento  NVARCHAR(4) NOT NULL
+cod_cargo NCHAR(5) NOT NULL
+cod_departamento NVARCHAR(5) NOT NULL
 matricula NVARCHAR(7) NOT NULL
 salario FLOAT(8) NOT NULL
 
 -- CLIENTE
-cpf NVARCHAR(11) NOT NULL
-cod_chamada INT(7) NOT NULL
-nome NVARCHAR(30)  NOT NULL
+cpf_cliente NVARCHAR(11) NOT NULL
+cod_chamada INT(1) NOT NULL
+nome NVARCHAR(30) NOT NULL
 sexo NCHAR(1) NOT NULL
 email NVARCHAR NOT NULL
 cep NVARCHAR(11) NOT NULL
-telefone NVARCHAR (3) NOT NULL
+telefone_cliente NVARCHAR (11) NOT NULL
 cidade NVARCHAR(30) NOT NULL
 
 
 
 --RECLAMAÇOES 
-cod_chamada INT(7) NOT NULL
-cod_departamento  NVARCHAR(5) NOT NULL
-id_cliente INT(7) NOT NULL
+cod_chamada INT(1) NOT NULL
+cod_departamento NVARCHAR(5) NOT NULL
+cpf_cliente NVARCHAR(11) NOT NULL
 matricula INT(7) NOT NULL
 protocolo INT(7) NOT NULL
-
+telefone_cliente NVARCHAR (11) NOT NULL
 
 --CARDINALIDADE
 
