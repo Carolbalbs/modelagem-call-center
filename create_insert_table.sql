@@ -23,13 +23,13 @@ INSERT INTO funcionario
 ('9876543', 'DEP01', 'CGO03', 'Pedro Santos', 'M', '876543210', '23456789012', '2022-02-01'),
 ('7894560', 'DEP02', 'CGO03', 'Carlos Mendes', 'M', '654321098', '45678901234', '2022-04-01'),
 ('8567234', 'DEP02', 'CGO03', 'Laura Ferreira', 'F', '543210987', '56789012345', '2022-05-01'),
-('8901234', 'DEP03', 'CGO03', 'Gabriela Santos', 'F', '321098765', '78901234567', '2022-07-01'),
+('8903412', 'DEP03', 'CGO03', 'Gabriela Santos', 'F', '321098765', '78901234567', '2022-07-01'),
 ('5678901', 'DEP03', 'CGO03', 'Julio Oliveira', 'M', '210987654', '89012345678', '2022-08-01'),
 ('1234567', 'DEP03', 'CGO04', 'João Silva', 'M', '987654321', '12345678901', '2022-01-15'),
 ('2345678', 'DEP03', 'CGO04', 'Maria Santos', 'F', '876543210', '23456789012', '2021-05-10'),
 ('3456789', 'DEP03', 'CGO04', 'Pedro Souza', 'M', '765432109', '34567890123', '2023-03-20'),
 ('4567890', 'DEP03', 'CGO04', 'Carlos Santos', 'M', '654321098', '45678901234', '2023-06-15'),
-('5678901', 'DEP03', 'CGO04', 'Juliana Lima', 'F', '543210987', '56789012345', '2023-06-20'),
+('5678531', 'DEP03', 'CGO04', 'Juliana Lima', 'F', '543210987', '56789012345', '2023-06-20'),
 ('6789012', 'DEP03', 'CGO04', 'Pedro Rocha', 'M', '432109876', '67890123456', '2023-06-25'),
 ('7890123', 'DEP03', 'CGO04', 'Camila Costa', 'F', '321098765', '78901234567', '2023-06-27'),
 ('8901234', 'DEP03', 'CGO04', 'Rafaela Oliveira', 'F', '210987654', '89012345678', '2023-06-30'),
@@ -56,7 +56,7 @@ INSERT INTO cargo
 ('CGO01', 'Gerente'),
 ('CGO02', 'Coordenador'),
 ('CGO03', 'Analista'),
-('CGO04', 'Atendente')
+('CGO04', 'Atendente');
 
 --Criando tabela GERENTE e inserindo dados
 CREATE TABLE gerente(
@@ -65,7 +65,7 @@ cod_cargo NCHAR(5) NOT NULL,
 cod_departamento  NVARCHAR(5) NOT NULL,
 matricula NVARCHAR(7) NOT NULL,
 vale_alimentacao FLOAT(8) NOT NULL,
-  PRIMARY KEY (salario) 
+  PRIMARY KEY (matricula) 
 );
 INSERT INTO gerente
   VALUES
@@ -80,7 +80,7 @@ cod_cargo NCHAR(5) NOT NULL,
 cod_departamento  NVARCHAR(5) NOT NULL,
 matricula NVARCHAR(7) NOT NULL,
 salario FLOAT(8) NOT NULL,
- PRIMARY KEY (gratificacao)
+ PRIMARY KEY (matricula)
 );
 INSERT INTO coordenador
     VALUES
@@ -106,8 +106,7 @@ INSERT INTO analista
 
 ('Infraestrutura Sr.', 'CGO03', 'DEP02', '7894560', 4500.87),
 ('Infraestrutura Jr.', 'CGO03', 'DEP02', '8567234', 4500.87),
-
-('Infraestrutura Sr.', 'CGO03', 'DEP03', '8901234', 3500.65),
+('Infraestrutura Sr.', 'CGO03', 'DEP03', '8903412', 3500.65),
 ('Sistemas Sr.', 'CGO03', 'DEP03', '5678901', 3500.65);
 
 --Criando tabelas ATENDENTE DE CALL CENTER e inserindo dados
@@ -117,7 +116,7 @@ CREATE TABLE atendente(
   cod_departamento  NVARCHAR(5) NOT NULL,
   matricula NVARCHAR(7) NOT NULL,
   salario FLOAT(8) NOT NULL ,
-  PRIMARY KEY(hora_extra)
+  PRIMARY KEY(matricula)
 );
 INSERT INTO atendente
     VALUES
@@ -126,7 +125,7 @@ INSERT INTO atendente
 (120.00, 'CGO04', 'DEP02', '2345678', 2300.00),
 (120.00, 'CGO04', 'DEP02', '3456789', 2300.00),
 (130.00, 'CGO04', 'DEP03', '4567890', 2500.00),
-(130.00, 'CGO04', 'DEP03', '5678901', 2500.00),
+(130.00, 'CGO04', 'DEP03', '5678531', 2500.00),
 (130.00, 'CGO04', 'DEP03', '6789012', 2500.00),
 (130.00, 'CGO04', 'DEP03', '7890123', 2500.00),
 (130.00, 'CGO04', 'DEP03', '8901234', 2500.00),
@@ -162,7 +161,7 @@ CREATE TABLE reclamacoes(
   matricula NVARCHAR(7) NOT NULL,
   protocolo INT(7) NOT NULL,
   telefone_cliente NVARCHAR (11) NOT NULL,
-  PRIMARY KEY(cod_chamada)
+  PRIMARY KEY(protocolo)
 );
 INSERT INTO reclamacoes
     VALUES
