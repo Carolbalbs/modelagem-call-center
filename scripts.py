@@ -31,7 +31,7 @@ connection.close()
 # curs.execute(sql_insert)
 # connection.commit()
 
-# sql_update = ""
+# sql_update = "url()"
 
 # curs.execute(sql_update)
 # connection.commit()
