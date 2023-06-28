@@ -118,21 +118,23 @@ sudo systemctl enable firewalld
 Selecione o numero da porta que deseja habilitar eu escolhi habilitar a '5432' por que é o padrão de conexão com o postgre
 ```
 sudo firewall-cmd --permanent --zone=public --add-port=5432/tcp
+```
+```
 sudo firewall-cmd --reload
 ```
 
 
 # Habilitando banco de dados para utilizar com Dbeaver
 
-## Verificar se o banco está online
+### Verificar se o banco está online
 ```
 sudo service postgresql status
 ```
-## Reiniciar a conexão com o banco
+### Reiniciar a conexão com o banco
 ```
 sudo service postgresql restart
 ```
-## Reiniciar a conexão com o banco
+### Reiniciar a conexão com o banco
 ```
 sudo service postgresql stop
 ```
