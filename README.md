@@ -134,7 +134,7 @@ sudo service postgresql status
 ```
 sudo service postgresql restart
 ```
-### Reiniciar a conexão com o banco
+### Fechar a conexão com o banco
 ```
 sudo service postgresql stop
 ```
