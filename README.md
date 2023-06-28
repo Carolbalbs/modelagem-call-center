@@ -138,3 +138,35 @@ sudo service postgresql restart
 ```
 sudo service postgresql stop
 ```
+
+# Acessando user postgres
+
+sudo -i -u postgres
+
+## Para interagir com o SGBD imediatamente basta digitar 
+```
+psql
+```
+
+Digite ```\q``` para sair do prompt do Postgres 
+
+```
+postgres=# \q
+```
+# Cadastrar novo user 
+Utilizando o user postgres iremos criar um nove user
+
+mais uma vez digitar o comando 
+
+sudo -i -u postgres
+
+Em seguidar digitar
+
+createuser --interactive
+
+Output
+Enter name of role to add: sammy
+Shall the new role be a superuser? (y/n) y
+
+# Criar DataBase call center
+sudo createdb adm_callcenter
