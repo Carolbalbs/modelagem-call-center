@@ -1,7 +1,7 @@
 
 # Modelagem de Banco de Dados para Call Center
 
->Uma breve descrição sobre o negocio : Uma empresa que trabalha com CallCenter solicitou o desenvolvimento de um sistema para realizar o controle das suas atividades. >Eles desejam criar um cadastro dos funcionário. Além disso, desejam que exista um controle para o cadastro das reclamações que chegam, permitindo identificá-las como >chamada em aberto e já resolvidas. Pretendem ao final de cada semana, criar um relatório que descreva o número de reclamações registradas e resolvidas. Solicitaram >que seja possível transformar uma reclamação de aberto em resolvida a partir do código da reclamação.
+>Uma breve descrição sobre o negocio : Uma empresa que trabalha com CallCenter solicitou o desenvolvimento de um sistema para realizar o controle das suas atividades. Eles desejam criar um cadastro dos funcionário. Além disso, desejam que exista um controle para o cadastro das reclamações que chegam, permitindo identificá-las como chamada em aberto e já resolvidas. Pretendem ao final de cada semana, criar um relatório que descreva o número de reclamações registradas e resolvidas. Solicitaram que seja possível transformar uma reclamação de aberto em resolvida a partir do código da reclamação.
 
 
 ## Stack utilizada
