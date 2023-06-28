@@ -34,7 +34,14 @@ exit
 ## Instalando e Configurando acesso remoto ao postgreSQL
 
 
-### Intalando postgreSQL 
+### Intalando postgreSQL
+
+Antes de iniciar a instalaçãp do  Postgres,  atualize os pacotes local do seu servidor:
+```
+sudo apt update
+```
+Em seguida, instale o pacote Postgres (o pacote -contrib contem alguns serviços e funcionalidade adicionais )
+
 ```
 sudo apt install postgresql postgresql-contrib
 ```
@@ -115,5 +122,17 @@ sudo firewall-cmd --reload
 ```
 
 
+# Habilitando banco de dados para utilizar com Dbeaver
 
-
+## Verificar se o banco está online
+```
+sudo service postgresql status
+```
+## Reiniciar a conexão com o banco
+```
+sudo service postgresql restart
+```
+## Reiniciar a conexão com o banco
+```
+sudo service postgresql stop
+```
