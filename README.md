@@ -31,7 +31,7 @@ Para fechar conexão basta digitar o comando
 ```
 exit
 ```
-## Instalando e Configurando acesso remoto ao postgreSQL
+## Instalando e Configurando acesso remoto ao PostgreSQL
 
 
 ### Intalando postgreSQL
