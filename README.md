@@ -34,7 +34,7 @@ exit
 ## Instalando e Configurando acesso remoto ao PostgreSQL
 
 
-### Intalando postgreSQL
+### Intalando PostgreSQL
 
 Antes de iniciar a instalaçãp do  Postgres,  atualize os pacotes local do seu servidor:
 ```
@@ -59,7 +59,7 @@ password 'digitar senha aqui';
 ```\q``` para sair
 
 
-### Alterando Arquivo  postgresql.conf
+### Alterando Arquivo  Postgresql.conf
 ```
 sudo nano /etc/postgresql/versao_do_postgres/main/postgresql.conf
 ```
