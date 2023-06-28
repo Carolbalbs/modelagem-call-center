@@ -1,13 +1,13 @@
 --Criando tabela de FUNCIONARIO e inserindo dados
 
 CREATE TABLE funcionario(
-matricula NVARCHAR(7) NOT NULL,
-cod_departamento NVARCHAR(5) NOT NULL,
-cod_cargo NVARCHAR(5) NOT NULL,
-nome NVARCHAR(30)  NOT NULL,
-sexo NCHAR(1) NOT NULL,
-telefone NVARCHAR(11) NOT NULL,
-cpf NVARCHAR(11) NOT NULL,
+matricula VARCHAR(7) NOT NULL,
+cod_departamento VARCHAR(5) NOT NULL,
+cod_cargo VARCHAR(5) NOT NULL,
+nome VARCHAR(30)  NOT NULL,
+sexo CHAR(1) NOT NULL,
+telefone VARCHAR(11) NOT NULL,
+cpf VARCHAR(11) NOT NULL,
 data_admissao DATE NOT NULL,
 PRIMARY KEY(matricula)
 );
@@ -37,8 +37,8 @@ INSERT INTO funcionario
 
 --Criando tabela DEPARTAMENTO CALL CENTER e inserindo dados
 CREATE TABLE departamento(
-  cod_departamento  NVARCHAR(5) NOT NULL,
-  nome_departamento NVARCHAR(12) NOT NULL 
+  cod_departamento  VARCHAR(5) NOT NULL,
+  nome_departamento VARCHAR(12) NOT NULL 
 );
 INSERT INTO departamento
     VALUES
@@ -48,8 +48,8 @@ INSERT INTO departamento
 
 --Criando tabela CARGO CALL CENTER e inserindo dados
 CREATE TABLE cargo(
-  cod_cargo NVARCHAR(5) NOT NULL,
-  nome_cargo NVARCHAR(12) NOT NULL
+  cod_cargo VARCHAR(5) NOT NULL,
+  nome_cargo VARCHAR(12) NOT NULL
 );
 INSERT INTO cargo
     VALUES
@@ -61,9 +61,9 @@ INSERT INTO cargo
 --Criando tabela GERENTE e inserindo dados
 CREATE TABLE gerente(
 salario FLOAT(8) NOT NULL,
-cod_cargo NCHAR(5) NOT NULL,
-cod_departamento  NVARCHAR(5) NOT NULL,
-matricula NVARCHAR(7) NOT NULL,
+cod_cargo CHAR(5) NOT NULL,
+cod_departamento  VARCHAR(5) NOT NULL,
+matricula VARCHAR(7) NOT NULL,
 vale_alimentacao FLOAT(8) NOT NULL,
   PRIMARY KEY (matricula) 
 );
@@ -76,9 +76,9 @@ INSERT INTO gerente
 --Criando tabela COORDENADOR CALL CENTER e inserindo dados
 CREATE TABLE coordenador(
 gratificacao FLOAT(8) NOT NULL,
-cod_cargo NCHAR(5) NOT NULL,
-cod_departamento  NVARCHAR(5) NOT NULL,
-matricula NVARCHAR(7) NOT NULL,
+cod_cargo CHAR(5) NOT NULL,
+cod_departamento  VARCHAR(5) NOT NULL,
+matricula VARCHAR(7) NOT NULL,
 salario FLOAT(8) NOT NULL,
  PRIMARY KEY (matricula)
 );
@@ -92,10 +92,10 @@ INSERT INTO coordenador
 --Criando tabelas ANALISTA DE CALL CENTER e inserindo dados
 
 CREATE TABLE analista(
-especialidade NVARCHAR(12) NOT NULL,
-cod_cargo NCHAR(5) NOT NULL,
-cod_departamento  NVARCHAR(5) NOT NULL,
-matricula NVARCHAR(7) NOT NULL,
+especialidade VARCHAR(30) NOT NULL,
+cod_cargo CHAR(5) NOT NULL,
+cod_departamento  VARCHAR(5) NOT NULL,
+matricula VARCHAR(7) NOT NULL,
 salario FLOAT(8) NOT NULL,
   PRIMARY KEY(matricula)
 );
@@ -103,7 +103,6 @@ INSERT INTO analista
     VALUES
 ('Sistemas Jr.', 'CGO03', 'DEP01', '1456237', 4000.35),
 ('Sistemas Sr.', 'CGO03', 'DEP01', '9876543', 4000.35),
-
 ('Infraestrutura Sr.', 'CGO03', 'DEP02', '7894560', 4500.87),
 ('Infraestrutura Jr.', 'CGO03', 'DEP02', '8567234', 4500.87),
 ('Infraestrutura Sr.', 'CGO03', 'DEP03', '8903412', 3500.65),
@@ -112,9 +111,9 @@ INSERT INTO analista
 --Criando tabelas ATENDENTE DE CALL CENTER e inserindo dados
 CREATE TABLE atendente(
   hora_extra FLOAT(8) NOT NULL,
-  cod_cargo NCHAR(5) NOT NULL,
-  cod_departamento  NVARCHAR(5) NOT NULL,
-  matricula NVARCHAR(7) NOT NULL,
+  cod_cargo CHAR(5) NOT NULL,
+  cod_departamento  VARCHAR(5) NOT NULL,
+  matricula VARCHAR(7) NOT NULL,
   salario FLOAT(8) NOT NULL ,
   PRIMARY KEY(matricula)
 );
@@ -133,14 +132,14 @@ INSERT INTO atendente
 
 --Criando tabelas CLIENTE e inserindo dados
 CREATE TABLE cliente(
-  cpf_cliente NVARCHAR(11) NOT NULL,
-  cod_chamada NCHAR(1) NOT NULL,
-  nome NVARCHAR(30)  NOT NULL,
-  sexo NCHAR(1) NOT NULL,
-  email NVARCHAR NOT NULL,
-  cep NVARCHAR(11) NOT NULL,
-  telefone_cliente NVARCHAR (11) NOT NULL,
-  cidade NVARCHAR(30) NOT NULL,
+  cpf_cliente VARCHAR(11) NOT NULL,
+  cod_chamada CHAR(1) NOT NULL,
+  nome VARCHAR(30)  NOT NULL,
+  sexo CHAR(1) NOT NULL,
+  email VARCHAR NOT NULL,
+  cep VARCHAR(11) NOT NULL,
+  telefone_cliente VARCHAR (11) NOT NULL,
+  cidade VARCHAR(30) NOT NULL,
   PRIMARY KEY(cpf_cliente)
 );
 INSERT INTO cliente
@@ -155,12 +154,12 @@ INSERT INTO cliente
 
 --Criando tabelas RECLAMAÇOES e inserindo dados
 CREATE TABLE reclamacoes(
-  cod_chamada INT(1) NOT NULL,
-  cod_departamento  NVARCHAR(5) NOT NULL,
-  cpf_cliente NVARCHAR(11) NOT NULL,
-  matricula NVARCHAR(7) NOT NULL,
-  protocolo INT(7) NOT NULL,
-  telefone_cliente NVARCHAR (11) NOT NULL,
+  cod_chamada CHAR(1) NOT NULL,
+  cod_departamento  VARCHAR(5) NOT NULL,
+  cpf_cliente VARCHAR(11) NOT NULL,
+  matricula VARCHAR(7) NOT NULL,
+  protocolo INT NOT NULL,
+  telefone_cliente VARCHAR (11) NOT NULL,
   PRIMARY KEY(protocolo)
 );
 INSERT INTO reclamacoes
@@ -171,8 +170,6 @@ INSERT INTO reclamacoes
 ('A', 'DEP03', '76543210987', '7890123', 1005031,'7193219876'),
 ('R', 'DEP03' ,'98765432109', '8901234', 1002361,'11994321098'),
 ('A', 'DEP03' ,'34567890123', '9012345', 1044365,'71965432109');
-
--- 
 -- 
 -- 
 -- 
