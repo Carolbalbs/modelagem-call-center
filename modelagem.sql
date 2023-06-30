@@ -18,61 +18,55 @@ cod_cargo NVARCHAR(5) NOT NULL
 nome_cargo NVARCHAR(12) NOT NULL
 
 -- GERENTE
-salario FLOAT(8) NOT NULL
-cod_cargo NCHAR(5) NOT NULL
-cod_departamento  NVARCHAR(5) NOT NULL
 matricula NVARCHAR(7) NOT NULL
+cod_cargo NCHAR(5) NOT NULL
+salario FLOAT(8) NOT NULL
+cod_departamento  NVARCHAR(5) NOT NULL
 vale_alimentacao FLOAT(8) NOT NULL
 
 -- COORDENADOR DE ATENDIMENTO
-gratificacao FLOAT(8) NOT NULL
-cod_cargo NCHAR(5) NOT NULL
-cod_departamento NVARCHAR(5) NOT NULL
 matricula NVARCHAR(7) NOT NULL
+cod_cargo NCHAR(5) NOT NULL
+gratificacao FLOAT(8) NOT NULL
+cod_departamento NVARCHAR(5) NOT NULL
 salario FLOAT(8) NOT NULL
 
 
 -- ANALISTA DE CALL CENTER
-especialidade NVARCHAR(12) NOT NULL
-cod_cargo NCHAR(5) NOT NULL
-cod_departamento NVARCHAR(5) NOT NULL
 matricula NVARCHAR(7) NOT NULL
+cod_cargo NCHAR(5) NOT NULL
+especialidade NVARCHAR(12) NOT NULL
+cod_departamento NVARCHAR(5) NOT NULL
 salario FLOAT(8) NOT NULL
 
 
 -- ATENDENTE DE CALL CENTER 
 
-hora_extra FLOAT(8) NOT NULL
-cod_cargo NCHAR(5) NOT NULL
-cod_departamento NVARCHAR(5) NOT NULL
 matricula NVARCHAR(7) NOT NULL
+cod_cargo NCHAR(5) NOT NULL
+hora_extra FLOAT(8) NOT NULL
+cod_departamento NVARCHAR(5) NOT NULL
 salario FLOAT(8) NOT NULL
 
 -- CLIENTE
 cpf_cliente NVARCHAR(11) NOT NULL
+telefone_cliente NVARCHAR (11) NOT NULL
 cod_chamada INT(1) NOT NULL
 nome NVARCHAR(30) NOT NULL
 sexo NCHAR(1) NOT NULL
 email NVARCHAR NOT NULL
 cep NVARCHAR(11) NOT NULL
-telefone_cliente NVARCHAR (11) NOT NULL
 cidade NVARCHAR(30) NOT NULL
 
 
 
 --RECLAMAÇOES 
-cod_chamada INT(1) NOT NULL
-cod_departamento NVARCHAR(5) NOT NULL
+
+protocolo INT(7) NOT NULL
 cpf_cliente NVARCHAR(11) NOT NULL
 matricula INT(7) NOT NULL
-protocolo INT(7) NOT NULL
 telefone_cliente NVARCHAR (11) NOT NULL
+cod_chamada INT(1) NOT NULL
+cod_departamento NVARCHAR(5) NOT NULL
 
---CARDINALIDADE
 
--- Um departamento contem 1 ou mais funcionarios
--- Um funcionario faz parte de apenas um departamento
--- Um funcionario ocupa apenas um cargo de gerente em um departamento 
--- Um funcionario ocupa apenas um cargo de coordenador em um departamento 
--- Um ou mais funcionarios ocupam um ou mais cargos de analista em um departamento 
--- Um ou mais funcionarios ocupam um ou mais cargos de atendente em um departamento 
