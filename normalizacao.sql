@@ -25,7 +25,7 @@ def define_chaves():
 
 
 # ALTER TABLE reclamacoes  
-# ADD FOREIGN KEY (matricula) REFERENCES atendente(matricula);
+# ADD FOREIGN KEY (matricula) REFERENCES funcionario(matricula);
 
 # # -- UNIQUE COD_CARGO
 # ALTER TABLE cargo
