@@ -7,11 +7,11 @@ from sqlalchemy import create_engine
 
 
 #Estabelecendo conexão com Data base
-engine = create_engine('postgresql://postgres:q$74831@129.159.60.153:5432/postgres') 
+engine = create_engine('postgresql://postgres:12345@129.159.60.153:5432/postgres') 
 def conecta_db():
     connection = pg.connect(database="postgres",
                            user="postgres",
-                           password="q$74831",
+                           password="12345",
                            host="129.159.60.153",
                            port="5432")
 
