@@ -50,7 +50,7 @@ sudo apt install postgresql postgresql-contrib
 sudo -u postgres psql
 ```
 ```
-postgres=# postgres=# alter user postgres encrypted password '12345';
+postgres=# alter user postgres encrypted password '12345';
  
 ```
 
